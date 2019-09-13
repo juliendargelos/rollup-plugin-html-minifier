@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-html-minifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minify html with html-minifier and rollup",
   "main": "index.js",
   "types": "index.d.ts",

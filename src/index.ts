@@ -1,7 +1,7 @@
 import { minify, Options } from 'html-minifier'
 import { OutputOptions, OutputBundle } from 'rollup'
 
-export default (options: Options) => ({
+export default (options: Options = {}) => ({
   name: 'html-minifier',
 
   generateBundle(outputOptions: OutputOptions, bundle: OutputBundle) {

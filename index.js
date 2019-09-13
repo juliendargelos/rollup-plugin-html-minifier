@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const html_minifier_1 = require("html-minifier");
-exports.default = (options) => ({
+exports.default = (options = {}) => ({
     name: 'html-minifier',
     generateBundle(outputOptions, bundle) {
         Object.values(bundle).forEach((file) => {
