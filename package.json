@@ -2,24 +2,33 @@
   "name": "rollup-plugin-html-minifier",
   "version": "1.0.2",
   "description": "Minify html with html-minifier and rollup",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "repository": "juliendargelos/rollup-plugin-html-minifier",
   "author": "Julien Dargelos <contact@juliendargelos.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w --noEmit",
-    "prepare": "install-peers"
+    "build": "rollup -c"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@types/html-minifier": "^3.5.3",
     "html-minifier": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.5",
-    "install-peers-cli": "^2.1.1",
-    "typescript": "^3.6.3"
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "rollup": "^2.10.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-ts": "^1.2.24",
+    "typescript": "^3.9.3"
   },
   "peerDependencies": {
     "rollup": "^2.10.0"

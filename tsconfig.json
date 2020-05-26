@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "es6",
+    "module": "es2015",
+    "lib": ["es2017", "dom", "es6", "dom.iterable", "scripthost"],
+    "declaration": true,
     "strict": true,
-    "module": "commonjs",
+    "experimentalDecorators": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "declaration": true,
-    "outDir": "."
+    "baseUrl": "."
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
