@@ -22,6 +22,6 @@
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "rollup": "^1.21.2"
+    "rollup": "^2.10.0"
   }
 }
