@@ -1,6 +1,6 @@
 # rollup-plugin-html-minifier
 
-This plugin minifies all files with extension `.html` in rollup bundle with [html-minifier](https://github.com/kangax/html-minifier).
+This plugin minifies html files in rollup bundle with [html-minifier](https://github.com/kangax/html-minifier).
 
 ## Install
 
@@ -16,19 +16,32 @@ npm install rollup-plugin-html-minifier -D
 
 ## Usage
 
-```javascript
-// rollup.config.js
+rollup.config.js
 
+```javascript
 import htmlMinifier from 'rollup-plugin-html-minifier'
 
 export default {
   // ...
   plugins: [
     htmlMinifier({
-      // html-minifier options here
+      // These are the defaults values:
+
+      // Glob pattern or array of glob patterns to include
+      include: '*.html',
+
+      // Glob pattern or array of glob patterns to exclude
+      exclude: undefined,
+
+      // Method returning a boolean that filters files to process
+      // given their name (overrides include and exclude parameters)
+      filter: undefined, 
+
+      // html-minifier options
+      options: {}
     })
   ]
 }
 ```
 
-See [html-minifier options](https://github.com/kangax/html-minifier#options-quick-reference).
+Most of the html-minifier options are disabled by default. You need to set some of them to get an actual minification. See [html-minifier options](https://github.com/kangax/html-minifier#options-quick-reference).

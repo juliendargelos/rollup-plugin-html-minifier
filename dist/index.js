@@ -1,12 +1,13 @@
 'use strict';
 
 var htmlMinifier = require('html-minifier');
+var pluginutils = require('@rollup/pluginutils');
 
-var index = (options = {}) => ({
+var index = ({ include = '*.html', exclude = undefined, filter = pluginutils.createFilter(include, exclude), options = {} } = {}) => ({
     name: 'html-minifier',
     generateBundle(outputOptions, bundle) {
         Object.values(bundle).forEach((file) => {
-            if (file.type !== 'asset' || file.fileName.slice(-5) !== '.html')
+            if (file.type !== 'asset' || !filter(file.fileName))
                 return;
             file.source = htmlMinifier.minify(file.source.toString(), options);
         });
