@@ -25,7 +25,7 @@ export default {
   // ...
   plugins: [
     htmlMinifier({
-      // These are the defaults values:
+      // These are the default values:
 
       // Glob pattern or array of glob patterns to include
       include: '*.html',
